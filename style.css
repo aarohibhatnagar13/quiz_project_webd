@@ -1,0 +1,13 @@
+h1 {
+    text-align:center;
+    border: 2px solid black;
+    border-radius: 3rem;
+    border-color: #456882;
+    
+    
+}
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+    background-color: #E3E3E3;
+}
