@@ -1,13 +1,33 @@
 h1 {
-    text-align:center;
-    border: 2px solid black;
+    text-align: center;
+    border: 2px solid #456882;
     border-radius: 3rem;
-    border-color: #456882;
-    
-    
+    color: #E3E3E3;
+    background-color: #1B3C53;    
 }
 body {
     font-family: Arial, sans-serif;
     margin: 20px;
     background-color: #E3E3E3;
+}
+
+button {
+    display: block;
+    width: 100%;
+    margin: 0;
+    padding: 2rem;
+    background-color: #456882;
+    border-radius: 3rem;
+    box-shadow: 0 0 5px #456882;
+    text-align: center;
+    color: #E3E3E3;
+    box-sizing: border-box;
+}
+button:hover {
+    background-color: #456882;
+    transform: scale(1.05);
+}
+
+button:active{
+    transform: scale(0.95);
 }
