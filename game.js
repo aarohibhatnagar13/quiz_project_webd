@@ -14,8 +14,14 @@ async function loadQuizData() {
         console.log("Fetching questions for category:", categoryIDs);
         const response = await fetch(apiURL);
         const data = await response.json();
+
         
-        console.log("Success! Data received:", data.results);
+        console.log("Success! Data received:");
+        const questions = data.results;
+        for (let i = 0; i < questions.length; i++) {      
+            console.log(`Q${i + 1}: ${questions[i].question}`);
+        }
+        
         
         
     } catch (error) {
@@ -24,3 +30,4 @@ async function loadQuizData() {
 }
 
 loadQuizData();
+
