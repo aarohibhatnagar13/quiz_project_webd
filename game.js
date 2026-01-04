@@ -16,6 +16,7 @@ function showResult(){
 }
 function showQuestion(){
     const questionContainer = document.getElementById('question');
+    if(!questionContainer) return;
     const questionData = allQuestions[currentQuestionIndex];
     questionContainer.innerHTML = '';
     if(questionData === undefined){
@@ -59,7 +60,7 @@ async function loadQuizData() {
     }
 
   
-    const apiURL = `https://opentdb.com/api.php?amount=10&category=${categoryIDs}&difficulty=easy&type=multiple`;
+    const apiURL = `https://opentdb.com/api.php?amount=10&category=${categoryIDs}&type=multiple`;
 
     try {
         console.log("Fetching questions for category:", categoryIDs);
