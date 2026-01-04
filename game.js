@@ -9,6 +9,12 @@ function decodeHTML(html) {
     return txt.value;
 }
 
+function showResult(){
+    const questionContainer = document.getElementById('question');
+    questionContainer.innerHTML = 
+    `<h2>Your Score: ${score} / ${allQuestions.length}</h2> `
+}
+
 function showQuestion(){
     const questionContainer = document.getElementById('question');
     const questionData = allQuestions[currentQuestionIndex];
@@ -22,6 +28,27 @@ function showQuestion(){
     questionElement.innerHTML=
     `<h2>${decodeHTML(questionData.question)}</h2>`;
     questionContainer.appendChild(questionElement);
+
+    const answers = [...questionData.incorrect_answers,questionData.correct_answer];
+    answers.push(questionData.correct_answer);
+    answers.sort(() => Math.random() - 0.5);
+    answers.forEach(answer => {
+        const answerBtn = document.createElement('button');
+        answerBtn.classList.add('answer-btn');
+        answerBtn.innerText = decodeHTML(answer);
+        answerBtn.addEventListener('click', () => {
+            if(answer === questionData.correct_answer){
+                score++;
+            }
+            currentQuestionIndex++;
+            if(currentQuestionIndex < allQuestions.length){
+                showQuestion();
+            }else{
+                showResult();
+            }
+        });
+        questionContainer.appendChild(answerBtn);
+    });
 }
 
 async function loadQuizData() {
