@@ -32,23 +32,61 @@ h1 {
 }
 
 /* The Card Design */
+/* 4. The Card Design */
 .category {
-    background: white;
-    border: none;
+    /* Changed background to a subtle modern gradient so it's not just "flat white" */
+    background: linear-gradient(145deg, #ffffff, #f0f4f8);
+    border: 1px solid white; /* Adds a tiny highlight on edges */
+    
     padding: 30px;
     font-size: 1.2rem;
-    font-weight: bold;
-    color: #444;
-    border-radius: 12px; /* Smooth corners */
-    box-shadow: 0 4px 6px rgba(0,0,0,0.05); /* Subtle shadow */
-    cursor: pointer;
-    transition: all 0.3s ease; /* Smooth animation */
+    font-weight: 700;
+    color: #2d3748;
+    border-radius: 16px; /* Rounder corners look friendlier */
     
-    /* Center text inside the card */
+    /* Soft initial shadow */
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05); 
+    
+    cursor: pointer;
+    /* Smooth transition for both the Lift and the Color change */
+    transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+    
+    /* Flexbox centering */
     display: flex;
     justify-content: center;
     align-items: center;
     min-height: 120px; 
+    text-transform: uppercase; /* Makes categories look more like badges */
+    letter-spacing: 1px;
+}
+
+/* 5. Hover Effects (The Uplift) */
+.category:hover {
+    /* Moves up significantly */
+    transform: translateY(-8px); 
+    
+    /* Shadow gets larger and softer to simulate height */
+    box-shadow: 0 15px 30px rgba(0, 123, 255, 0.15); 
+    
+    /* Border bottom acts as a colorful accent */
+    border-bottom: 4px solid #007bff; 
+    
+    /* Text turns blue */
+    color: #007bff;
+    
+    /* Background gets slightly brighter */
+    background: white;
+}
+
+/* 6. Click Effects (The "Press" Visual) */
+.category:active {
+    /* This makes it feel like you are physically pressing it down */
+    transform: scale(0.98) translateY(0); 
+    
+    /* Shadow disappears because it's pressed against the "floor" */
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    
+    background: #e6f0ff; /* Flashes light blue when clicked */
 }
 
 /* 5. Hover Effects */
