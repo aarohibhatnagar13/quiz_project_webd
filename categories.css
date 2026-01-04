@@ -1,0 +1,60 @@
+/* 1. Global Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* 2. Center the Page */
+body {
+    background-color: #f0f2f5; /* Light grey professional background */
+    height: 100vh;
+    display: flex;
+    flex-direction: column; /* Stack Title and Container */
+    justify-content: center;
+    align-items: center;
+}
+
+h1 {
+    color: #333;
+    margin-bottom: 2rem;
+    font-size: 2rem;
+}
+
+/* 3. The Grid Layout (The most efficient way to make a card grid) */
+#categories-container {
+    display: grid; 
+    grid-template-columns: repeat(2, 1fr); /* Creates 2 equal columns */
+    gap: 20px; /* Space between cards */
+    width: 90%;
+    max-width: 600px; /* Prevents it from getting too wide on desktop */
+}
+
+/* The Card Design */
+.category {
+    background: white;
+    border: none;
+    padding: 30px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #444;
+    border-radius: 12px; /* Smooth corners */
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05); /* Subtle shadow */
+    cursor: pointer;
+    transition: all 0.3s ease; /* Smooth animation */
+    
+    /* Center text inside the card */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 120px; 
+}
+
+/* 5. Hover Effects */
+.category:hover {
+    transform: translateY(-5px); /* Moves up slightly */
+    box-shadow: 0 10px 15px rgba(0,0,0,0.1); /* Shadow grows */
+    border-bottom: 5px solid #007bff; /* Adds a blue accent line */
+    color: #007bff;
+}
