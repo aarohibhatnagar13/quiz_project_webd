@@ -14,7 +14,6 @@ function showResult(){
     questionContainer.innerHTML = 
     `<h2>Your Score: ${score} / ${allQuestions.length}</h2> `
 }
-
 function showQuestion(){
     const questionContainer = document.getElementById('question');
     const questionData = allQuestions[currentQuestionIndex];
@@ -30,7 +29,6 @@ function showQuestion(){
     questionContainer.appendChild(questionElement);
 
     const answers = [...questionData.incorrect_answers,questionData.correct_answer];
-    answers.push(questionData.correct_answer);
     answers.sort(() => Math.random() - 0.5);
     answers.forEach(answer => {
         const answerBtn = document.createElement('button');
