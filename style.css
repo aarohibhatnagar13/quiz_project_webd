@@ -1,33 +1,48 @@
-h1 {
-    text-align: center;
-    border: 2px solid #456882;
-    border-radius: 3rem;
-    color: #E3E3E3;
-    background-color: #1B3C53;    
-}
+
 body {
-    font-family: Arial, sans-serif;
-    margin: 20px;
-    background-color: #E3E3E3;
-}
-
-button {
-    display: block;
-    width: 100%;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f4f4f9; 
+    display: flex;
+    justify-content: center; 
+    align-items: center;     
+    height: 100vh;        
     margin: 0;
-    padding: 2rem;
-    background-color: #456882;
-    border-radius: 3rem;
-    box-shadow: 0 0 5px #456882;
-    text-align: center;
-    color: #E3E3E3;
-    box-sizing: border-box;
-}
-button:hover {
-    background-color: #456882;
-    transform: scale(1.05);
 }
 
-button:active{
-    transform: scale(0.95);
+/* The "Card" - Standard component design */
+.container {
+    background: white;
+    padding: 2rem;
+    border-radius: 8px; /* Slight curve, not too round */
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1); /* Subtle shadow for depth */
+    text-align: center;
+    width: 300px;
+}
+
+h1 {
+    color: #333;
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+/* Primary Button - Standard "Call to Action" style */
+button {
+    background-color: #007bff; /* Standard Bootstrap Blue */
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 4px;
+    cursor: pointer;
+    width: 100%;
+    transition: background 0.2s;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+
+.hide {
+    display: none;
 }
