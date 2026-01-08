@@ -1,0 +1,96 @@
+/* =========================
+   Global Reset
+========================= */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* =========================
+   Page Layout
+========================= */
+body {
+    min-height: 100vh;
+    background-color: #f4f6e8;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+/* =========================
+   Title
+========================= */
+h1 {
+    background-color: #6f8461;
+    color: #fefee5;
+    padding: 40px 200px;
+    border-radius: 4rem;
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+}
+
+/* =========================
+   Main Card
+========================= */
+.container {
+    background-color: #f9f9e6;
+    padding: 40px 40px;
+    border-radius: 30px;
+    text-align: center;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+    width: 90%;
+    max-width: 550px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 25px;
+    font-size: 4rem;
+}
+
+/* =========================
+   Subtitle
+========================= */
+p {
+    color: #3a4a3f;
+    font-size: 1.2rem;
+}
+
+/* =========================
+   Controls
+========================= */
+#controls {
+    display: flex;
+    justify-content: center;
+}
+
+/* =========================
+   Start Button
+========================= */
+#play-quiz {
+    background-color: #9ea35d;
+    color: #ffffff;
+    border: none;
+    padding: 16px 45px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: all 0.25s ease-in-out;
+}
+
+/* =========================
+   Hover & Active Effects
+========================= */
+#play-quiz:hover {
+    background-color: #7d8349;
+    transform: translateY(-3px);
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.25);
+}
+
+#play-quiz:active {
+    transform: scale(0.97);
+}

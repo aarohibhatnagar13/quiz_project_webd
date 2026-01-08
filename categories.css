@@ -1,4 +1,6 @@
-/* 1. Global Reset */
+/* =========================
+   1. Global Reset
+========================= */
 * {
     margin: 0;
     padding: 0;
@@ -6,93 +8,98 @@
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-/* 2. Center the Page */
+/* =========================
+   2. Center the Page
+========================= */
 body {
-    background-color: #f0f2f5; /* Light grey professional background */
+    background-color: #f4f6e8;
     height: 100vh;
     display: flex;
-    flex-direction: column; /* Stack Title and Container */
+    flex-direction: column;
     justify-content: center;
     align-items: center;
 }
 
+/* =========================
+   Title
+========================= */
 h1 {
-    color: #333;
+    background-color: #6f8461;
+    color: #fefee5;
+    padding: 14px 40px;
+    border-radius: 3rem;
     margin-bottom: 2rem;
     font-size: 2rem;
+    text-align: center;
 }
 
-/* 3. The Grid Layout (The most efficient way to make a card grid) */
+/* =========================
+   3. Categories Grid
+========================= */
 #categories-container {
-    display: grid; 
-    grid-template-columns: repeat(2, 1fr); /* Creates 2 equal columns */
-    gap: 20px; /* Space between cards */
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
     width: 90%;
-    max-width: 600px; /* Prevents it from getting too wide on desktop */
+    max-width: 600px;
 }
 
-/* The Card Design */
-/* 4. The Card Design */
+/* =========================
+   4. Category Cards
+========================= */
 .category {
-    /* Changed background to a subtle modern gradient so it's not just "flat white" */
-    background: linear-gradient(145deg, #ffffff, #f0f4f8);
-    border: 1px solid white; /* Adds a tiny highlight on edges */
-    
+    background: linear-gradient(145deg, #f9f9e6, #edf0d4);
+    border: 1px solid #ffffff;
     padding: 30px;
     font-size: 1.2rem;
     font-weight: 700;
-    color: #2d3748;
-    border-radius: 16px; /* Rounder corners look friendlier */
-    
-    /* Soft initial shadow */
-    box-shadow: 0 4px 10px rgba(0,0,0,0.05); 
-    
+    color: #3a4a3f;
+    border-radius: 20px;
+
+    box-shadow: 0 4px 10px rgba(0,0,0,0.08);
     cursor: pointer;
-    /* Smooth transition for both the Lift and the Color change */
+
     transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
-    
-    /* Flexbox centering */
+
     display: flex;
     justify-content: center;
     align-items: center;
-    min-height: 120px; 
-    text-transform: uppercase; /* Makes categories look more like badges */
+    min-height: 120px;
+
+    text-transform: uppercase;
     letter-spacing: 1px;
 }
 
-/* 5. Hover Effects (The Uplift) */
+/* =========================
+   5. Hover Effect (Lift)
+========================= */
 .category:hover {
-    /* Moves up significantly */
-    transform: translateY(-8px); 
-    
-    /* Shadow gets larger and softer to simulate height */
-    box-shadow: 0 15px 30px rgba(0, 123, 255, 0.15); 
-    
-    /* Border bottom acts as a colorful accent */
-    border-bottom: 4px solid #007bff; 
-    
-    /* Text turns blue */
-    color: #007bff;
-    
-    /* Background gets slightly brighter */
-    background: white;
+    transform: translateY(-8px);
+    box-shadow: 0 15px 30px rgba(110, 132, 97, 0.35);
+    border-bottom: 5px solid #6f8461;
+    color: #6f8461;
+    background: #ffffff;
 }
 
-/* 6. Click Effects (The "Press" Visual) */
+/* =========================
+   6. Active / Click Effect
+========================= */
 .category:active {
-    /* This makes it feel like you are physically pressing it down */
-    transform: scale(0.98) translateY(0); 
-    
-    /* Shadow disappears because it's pressed against the "floor" */
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-    
-    background: #e6f0ff; /* Flashes light blue when clicked */
+    transform: scale(0.98) translateY(0);
+    box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+    background: #e6edd6;
 }
 
-/* 5. Hover Effects */
-.category:hover {
-    transform: translateY(-5px); /* Moves up slightly */
-    box-shadow: 0 10px 15px rgba(0,0,0,0.1); /* Shadow grows */
-    border-bottom: 5px solid #007bff; /* Adds a blue accent line */
-    color: #007bff;
+/* =========================
+   7. Mobile Responsive
+========================= */
+@media (max-width: 700px) {
+    #categories-container {
+        grid-template-columns: 1fr;
+    }
+
+    h1 {
+        font-size: 1.6rem;
+        padding: 12px 28px;
+    }
 }

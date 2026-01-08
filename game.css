@@ -1,0 +1,157 @@
+/* =========================
+   Base Reset
+========================= */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* =========================
+   Page Background
+========================= */
+body {
+    min-height: 100vh;
+    background-color: #f4f6e8;
+    font-family: "Poppins", sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    color: #3a4a3f;
+}
+
+/* =========================
+   Title
+========================= */
+h1 {
+    background-color: #6f8461;
+    color: #fefee5;
+    padding: 14px 40px;
+    border-radius: 3rem;
+    margin-bottom: 15px;
+    font-size: 2rem;
+    text-align: center;
+}
+
+/* =========================
+   Timer & Score
+========================= */
+#timer,
+#score {
+    background-color: #9ea35d;
+    color: #ffffff;
+    padding: 8px 22px;
+    border-radius: 20px;
+    margin: 6px;
+    font-size: 0.9rem;
+}
+
+/* =========================
+   Quiz Card
+========================= */
+#quiz-container {
+    width: 100%;
+    max-width: 700px;
+    margin-top: 25px;
+    padding: 30px;
+    background-color: #f9f9e6;
+    border-radius: 25px;
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
+}
+
+/* =========================
+   Question
+========================= */
+.question {
+    font-size: 1.4rem;
+    text-align: center;
+    margin-bottom: 30px;
+    line-height: 1.5;
+}
+
+/* =========================
+   Answers Grid
+========================= */
+#answers {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+/* =========================
+   Buttons (Category / Answer / Play)
+========================= */
+.category,
+.answer-btn,
+#play-quiz {
+    background-color: #9ea35d;
+    color: #ffffff;
+    border: none;
+    padding: 20px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    border-radius: 30px;
+    cursor: pointer;
+    width: 100%;
+    min-height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.25s ease-in-out;
+}
+
+/* =========================
+   Hover Effect
+========================= */
+.category:hover,
+.answer-btn:hover,
+#play-quiz:hover {
+    background-color: #7d8349;
+    transform: translateY(-3px);
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.25);
+}
+
+/* =========================
+   Active / Click Effect
+========================= */
+.category:active,
+.answer-btn:active,
+#play-quiz:active {
+    transform: scale(0.97);
+}
+
+/* =========================
+   Correct / Wrong States
+========================= */
+.answer-btn.correct {
+    background-color: #4CAF50 !important;
+    color: #ffffff;
+}
+
+.answer-btn.wrong {
+    background-color: #e74c3c !important;
+    color: #ffffff;
+}
+
+/* =========================
+   Disabled Buttons
+========================= */
+.answer-btn:disabled {
+    cursor: not-allowed;
+    opacity: 0.85;
+}
+
+/* =========================
+   Mobile Responsive
+========================= */
+@media (max-width: 800px) {
+    #answers {
+        grid-template-columns: 1fr;
+    }
+
+    h1 {
+        font-size: 1.6rem;
+        padding: 12px 28px;
+    }
+}
